@@ -31,7 +31,8 @@ font pango:Inconsolata 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt-256color
+#bindsym $mod+Return exec urxvt-256color
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -234,3 +235,4 @@ exec groupwise
 exec pnmixer
 exec parcellite
 exec xset m 4/2 0
+exec ~/i3-scripts/randr.sh
