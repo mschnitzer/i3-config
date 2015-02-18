@@ -152,9 +152,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # custom clients on workspaces
 assign [class="Firefox"]  1:www
-assign [class="Gvim"] 2:gvim
+assign [class="xfce4"] 2:terminal
 assign [class="Xchat"] 3:xchat
-assign [class="URxvt"] 4:terminal
+#assign [class="URxvt"] 4:terminal
 assign [class="rdesktop"] 5:rdp
 
 # auto jump back
