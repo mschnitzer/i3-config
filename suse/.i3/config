@@ -236,3 +236,4 @@ exec parcellite
 exec xset m 4/2 0
 exec ~/i3-scripts/randr.sh
 exec nm-applet
+exec feh --bg-fill ~/Pictures/wallpaper.jpg
