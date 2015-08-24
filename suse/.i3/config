@@ -129,11 +129,11 @@ new_float pixel 1
 # switch to workspace
 bindsym $mod+1 workspace 1:www
 bindsym $mod+2 workspace 2:terminal
-bindsym $mod+3 workspace 3:xchat
-bindsym $mod+4 workspace 4:thunderbird
-bindsym $mod+5 workspace 5:komodo
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
+bindsym $mod+3 workspace 3:hexchat
+bindsym $mod+4 workspace 4:claws-mail
+bindsym $mod+5 workspace 5:sublime
+bindsym $mod+6 workspace 6:pavucontrol
+bindsym $mod+7 workspace 7:nautilus
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
@@ -141,21 +141,29 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:www
 bindsym $mod+Shift+2 move container to workspace 2:terminal
-bindsym $mod+Shift+3 move container to workspace 3:xchat
-bindsym $mod+Shift+4 move container to workspace 4:thunderbird
-bindsym $mod+Shift+5 move container to workspace 5:komodo
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+3 move container to workspace 3:hexchat
+bindsym $mod+Shift+4 move container to workspace 4:claws-mail
+bindsym $mod+Shift+5 move container to workspace 5:sublime
+bindsym $mod+Shift+6 move container to workspace 6:pavucontrol
+bindsym $mod+Shift+7 move container to workspace 7:nautilus
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# screens
+bindsym $mod+shift+F11 exec "sh ~/.screenlayout/laptop-monitor.sh"
+
+# i3 lock
+bindsym $mod+Shift+P exec i3lock -b -i /home/manuel/Pictures/i3lock.png
+
 # custom clients on workspaces
-assign [class="firefox"] 1:firefox
+assign [class="chromium"] 1:chromium
 assign [class="xfce4"] 2:terminal
-assign [class="Xchat"] 3:xchat
-assign [class="thunderbird"] 4:thunderbird
-assign [class="komodo"] 5:komodo
+assign [class="hexchat"] 3:hexchat
+assign [class="claws-mail"] 4:claws-mail
+assign [class="sublime"] 5:sublime
+assign [class="pavucontrol"] 6:pavucontrol
+assign [class="nautilus"] 7:nautiluso
 
 # auto jump back
 workspace_auto_back_and_forth yes
@@ -233,6 +241,6 @@ exec groupwise
 exec pnmixer
 exec parcellite
 exec xset m 4/2 0
-exec ~/i3-scripts/randr.sh
 exec nm-applet
+exec ~/i3-scripts/dual-screens.sh
 exec feh --bg-fill ~/Pictures/wallpaper.jpg
