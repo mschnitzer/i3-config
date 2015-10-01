@@ -150,6 +150,10 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# keyboard layout
+bindsym $mod+Shift+u exec "setxkbmap -model pc105 -layout us -variant altgr-intl
+bindsym $mod+Shift+d exec "setxkbmap -model pc105 -layout de -variant nodeadkeys"
+
 # screens
 bindsym $mod+shift+F11 exec "sh ~/.screenlayout/laptop-monitor.sh"
 
